@@ -71,6 +71,24 @@ Ein "agentischer" Workflow arbeitet über mehrere Schritte an einer Aufgabe stat
 
 ---
 
+## How-to: Agent, Skill und Spec anlegen
+
+- **Agent anlegen**: eigene Chatmodus-Datei unter `.github/chatmodes/<name>.chatmode.md` mit Rolle, erlaubten Tools und Verhalten anlegen.
+- **Skill anlegen**: Ordner `.github/skills/<name>/SKILL.md` mit YAML-Frontmatter (`name`, `description`) und Schritt-für-Schritt-Anleitung anlegen.
+- **Spec anlegen**: kurze Markdown-Datei (z. B. `SPEC.md`) mit Anforderungen, Datenfeldern und Beispielen schreiben, bevor Code generiert wird.
+
+**Konkretes Beispiel:** dieses Kurs-Repo nutzt genau dieses Muster unter `.github/skills/` - jede Skill-Datei dort folgt derselben Struktur.
+
+**Verbreitete Werkzeuge für diese Muster:**
+
+| Werkzeug                      | Wofür                                                                 |
+| ----------------------------- | --------------------------------------------------------------------- |
+| GitHub Copilot Chat (VS Code) | Prompts, Agents und Skills direkt im Editor                           |
+| GitHub Spec Kit               | Open-Source-Vorlagen für Spec-driven Development                      |
+| LangChain / LangGraph         | Frameworks für eigene, komplexere Agenten (Ausblick, kein Kursinhalt) |
+
+---
+
 ## Guter vs. schwacher Prompt
 
 | Schwach                  | Besser                                                                                                                                                                               |

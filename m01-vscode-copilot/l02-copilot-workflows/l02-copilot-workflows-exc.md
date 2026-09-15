@@ -13,11 +13,13 @@ Copilot Chat ist installiert und angemeldet (Lab 1.1).
 2. Lies den Vorschlag und identifiziere mindestens eine Stelle, die du korrigieren oder ergänzen willst (z. B. fehlende Statuswerte, falsche Aktionen).
 3. Speichere den korrigierten Entwurf als `README-draft.md` in einem lokalen Ordner `teamboard/`.
 4. Formuliere einen zweiten, gezielteren Prompt, der nur die Statuswerte als Aufzählung liefert, und vergleiche die Antwortqualität mit Aufgabe 1.
+5. Schreibe zuerst eine kurze Spec (3-4 Stichpunkte: Ticket-Felder, Status-Werte, Aktionen) und formuliere danach den Prompt aus Aufgabe 1 erneut auf Basis dieser Spec. Halte in ein bis zwei Sätzen fest, ob der Vorschlag dadurch genauer wurde und ob die Aufgabe eher ein einzelner Prompt oder ein mehrschrittiger, agentischer Workflow war.
 
 ## Checkpoint
 
 - `teamboard/README-draft.md` existiert und enthält alle vier genannten Ticket-Felder sowie die drei Status-Werte.
 - Du kannst benennen, was du am ersten KI-Vorschlag korrigiert hast.
+- Du kannst in ein bis zwei Sätzen den Unterschied zwischen Spec-first- und Prompt-ohne-Spec-Ergebnis benennen.
 
 ## Abschlusskriterien
 

@@ -37,6 +37,19 @@ Diese Struktur entspricht `output/project/starter/README-draft.md` und `output/p
 
 Ein enger gefasster Prompt liefert typischerweise eine kürzere, direkter verwertbare Antwort - Beleg dafür, dass Prompt-Präzision die Nacharbeit reduziert.
 
+## Aufgabe 5: Spec-first vs. Prompt ohne Spec
+
+Beispiel-Spec (vor dem Prompt notiert):
+
+- Felder: Titel, Beschreibung, Zuständiger, Status
+- Status-Werte: To Do, In Progress, Done
+- Aktionen: erstellen, zuweisen, Status ändern
+
+Mit dieser Spec als Grundlage trifft der Prompt aus Aufgabe 1 die Felder und Status-Werte in der Regel beim ersten Versuch genau, ohne Nachbesserung.
+
+- Ohne Spec: der Vorschlag braucht meist noch eine Korrekturrunde (siehe Aufgabe 2).
+- Diese Aufgabe ist ein reiner Prompt-Workflow (eine Anfrage, eine Antwort) - ein agentischer Workflow läge vor, wenn die KI selbstständig mehrere Dateien anlegen und verknüpfen würde.
+
 ## Grenzen
 
 Der KI-generierte Text ist ein Entwurf; die endgültige Datenstruktur wird erst in Modul 7 (TypeScript-Interfaces) verbindlich.
