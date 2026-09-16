@@ -1,0 +1,83 @@
+# Themenübersicht: Fullstack Developer Toolbox
+
+- Modul 1: VS Code & Copilot
+  - Lab 1.1: VS Code Konfiguration/Extensions
+  - Lab 1.2: Copilot-gestützte Workflows
+- Modul 2: Git-Grundlagen
+  - Lab 2.1: Grundbegriffe
+  - Lab 2.2: Lokales Repo anlegen
+  - Lab 2.3: Commits & Historie
+- Modul 3: GitHub
+  - Lab 3.1: Repo anlegen/pushen
+  - Lab 3.2: Branching-Strategien
+  - Lab 3.3: Pull Requests
+- Modul 4: CI/CD mit GitHub Actions
+  - Lab 4.1: Workflow-Datei
+  - Lab 4.2: Lint/Build-Pipeline
+- Modul 5: Node.js
+  - Lab 5.1: Grundlagen/Installation
+  - Lab 5.2: NPM/Yarn Paketmanagement
+- Modul 6: TypeScript-Einstieg
+  - Lab 6.1: ECMAScript-Entwicklung/Vorteile
+  - Lab 6.2: tsconfig-Setup
+- Modul 7: TypeScript-Grundlagen
+  - Lab 7.1: Basistypen/Type Inference
+  - Lab 7.2: Interfaces
+  - Lab 7.3: Datenmodelle typisieren
+- Modul 8: TypeScript-OOP
+  - Lab 8.1: Klassen/Vererbung
+  - Lab 8.2: Access Modifiers
+  - Lab 8.3: Generics-Einstieg
+- Modul 9: JS/TS-Puffer
+- Modul 10: Container-Einstieg
+  - Lab 10.1: WSL 2
+  - Lab 10.2: Container vs. virtuelle Maschine
+  - Lab 10.3: Container-Ökosystem
+- Modul 11: Docker-Grundlagen
+  - Lab 11.1: Docker CLI
+  - Lab 11.2: Images vs. Container
+  - Lab 11.3: Node.js-App containerisieren
+- Modul 12: Docker-Images
+  - Lab 12.1: Dockerfile-Grundlagen
+  - Lab 12.2: Build & Run
+  - Lab 12.3: Layer-Caching/Größe
+- Modul 13: Docker Compose
+  - Lab 13.1: Multi-Service-Verbindung
+  - Lab 13.2: docker-compose.yml
+  - Lab 13.3: Ausblick CI-Integration
+- Modul 14: REST-API
+  - Lab 14.1: Ressourcen/HTTP-Methoden
+  - Lab 14.2: Express-REST-API
+  - Lab 14.3: API im Container
+- Modul 15: GraphQL & MongoDB
+  - Lab 15.1: GraphQL Queries/Mutations
+  - Lab 15.2: SQL vs. NoSQL
+  - Lab 15.3: MongoDB-Integration
+- Modul 16: Authentifizierung
+  - Lab 16.1: JWT/OAuth-Grundlagen
+  - Lab 16.2: Login-Flow
+  - Lab 16.3: Geschützte Routen testen
+- Modul 17: Frontend-Styling
+  - Lab 17.1: Emmet
+  - Lab 17.2: Grid/Flexbox
+  - Lab 17.3: Bootstrap 5
+  - Lab 17.4: Sass
+  - Lab 17.5: Gulp-Automatisierung
+- Modul 18: Einstieg in React
+  - Lab 18.1: SPA-Grundkonzepte
+  - Lab 18.2: Komponenten/State
+  - Lab 18.3: React-Projekt-Setup
+- Modul 19: React trifft die gesicherte API
+  - Lab 19.1: Anbindung an API/Auth
+  - Lab 19.2: Props/State-Datenfluss
+  - Lab 19.3: Vertiefende Übung
+- Modul 20: Angular im Vergleich (Trainer-Demo)
+  - Lab 20.1: Angular-Grundkonzepte
+  - Lab 20.2: React-vs-Angular-Vergleich
+- Modul 21: Cloud-Deployment (Trainer-Demo)
+  - Lab 21.1: Azure-Deployment-Grundlagen
+  - Lab 21.2: Azure Static Web Apps
+- Modul 22: Projekt-Abschluss und Rückblick
+  - Lab 22.1: Projekt-Rückblick
+  - Lab 22.2: Copilot-Workflows-Rückblick
+  - Lab 22.3: Offene Fragen und Feedback
