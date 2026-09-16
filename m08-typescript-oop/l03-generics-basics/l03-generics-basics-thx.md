@@ -72,8 +72,36 @@ const found = ticketRepo.findById("t-1"); // Typ: Ticket | undefined
 
 ---
 
+## `TicketService`: Geschäftslogik auf `TicketRepository` aufbauen
+
+Bisher kennt `TicketRepository` nur Speichern/Suchen. Statuswechsel ("To Do" -> "In Progress" -> "Done") sind Geschäftslogik und gehören in eine eigene Klasse, die das Repository nutzt statt es zu erweitern:
+
+```ts
+export class TicketService {
+  constructor(private repository: TicketRepository) {}
+
+  moveToNextStatus(id: string): Ticket | undefined {
+    const ticket = this.repository.findById(id);
+    if (!ticket) return undefined;
+
+    const order: Ticket["status"][] = ["To Do", "In Progress", "Done"];
+    const nextIndex = Math.min(
+      order.indexOf(ticket.status) + 1,
+      order.length - 1
+    );
+    ticket.status = order[nextIndex];
+    return ticket;
+  }
+}
+```
+
+- `private repository: TicketRepository` im Konstruktor ist Komposition ("hat ein Repository"), nicht Vererbung ("ist ein Repository") - passend, weil ein Service kein Repository _ist_, sondern eines _braucht_.
+- Diese Trennung spiegelt die Artefakte aus dem Kursplan wider: `TicketRepository` verwaltet Daten, `TicketService` verwaltet Regeln (hier: die erlaubte Statusreihenfolge).
+
+---
+
 ## Checkpoint
 
-`TicketRepository` wurde durch eine generische `Repository<T>` ersetzt oder darauf aufgebaut und mit `Ticket` als konkretem Typ verwendet; das Verhalten aus Lab 8.2 bleibt unverändert.
+`TicketRepository` wurde durch eine generische `Repository<T>` ersetzt oder darauf aufgebaut und mit `Ticket` als konkretem Typ verwendet; das Verhalten aus Lab 8.2 bleibt unverändert. Zusätzlich existiert `TicketService`, der über ein `private` Repository-Feld Statuswechsel kapselt.
 
 Weiter geht es mit Modul 9: Puffer für offene JavaScript/TypeScript-Fragen.

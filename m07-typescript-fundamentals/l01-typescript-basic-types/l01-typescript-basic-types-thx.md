@@ -53,6 +53,8 @@ let unknownValue: unknown = fetchExternalValue();
 
 **`unknown` vs. `any`:** `unknown` erlaubt keine Operation ohne vorherige Typprüfung - deutlich sicherer als `any`.
 
+**Vorgriff auf Lab 7.3:** der `Ticket`-Status wird später nicht als `string` oder `unknown`, sondern als String-Literal-Union (`"To Do" | "In Progress" | "Done"`) typisiert - eine dritte Möglichkeit, die enger ist als `unknown` (geprüfter Wert) und enger als `string` (nur diese drei Werte statt beliebiger Zeichenketten).
+
 ---
 
 ## Type Inference

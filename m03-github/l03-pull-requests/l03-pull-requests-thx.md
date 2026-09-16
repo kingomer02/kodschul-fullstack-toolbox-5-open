@@ -63,6 +63,17 @@ Merge Commit, Squash and Merge, Rebase and Merge - sie unterscheiden sich darin,
 
 ---
 
+## Branch Protection und Required Status Checks (Ausblick auf Modul 4)
+
+- Unter GitHub "Settings -> Branches" kann eine Regel für `main` verlangen, dass PRs nur gemerged werden dürfen, wenn bestimmte Checks (z. B. die CI-Pipeline aus Modul 4) erfolgreich sind.
+- Das verhindert, dass ein PR mit fehlschlagender Pipeline versehentlich gemerged wird - der "Merge"-Button bleibt sonst zwar klickbar, aber die Regel blockiert ihn.
+
+**Für TeamBoard:** sobald die CI-Pipeline in Modul 4 steht, lohnt es sich, sie als Required Status Check für `main` zu hinterlegen.
+
+**Alternative zur Weboberfläche:** die GitHub CLI (`gh`) erlaubt denselben Workflow im Terminal, z. B. `gh pr create`, `gh pr view --web`, `gh pr merge --squash` - nützlich, wenn man den Browser nicht wechseln will.
+
+---
+
 ## Checkpoint
 
 Ein Pull Request für `feature/setup` wurde erstellt, beschrieben und über GitHub gemerged; der Branch ist auf GitHub gelöscht.

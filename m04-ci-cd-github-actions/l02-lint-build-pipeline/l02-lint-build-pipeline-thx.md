@@ -54,7 +54,7 @@ Mindestens ein Step im Job ist mit einem Fehlercode beendet worden - der Job bri
 - run: npm run build
 ```
 
-**Grenze:** ohne passende `lint`/`build`-Skripte in `package.json` schlägt der Step sofort fehl - diese Skripte werden in Modul 5/6 mit dem Node/TS-Setup ergänzt.
+**Grenze:** ohne passende `lint`/`build`-Skripte in `package.json` schlägt der Step sofort fehl - diese Skripte sind hier bewusst nur Platzhalter (`echo ...`) und werden in Lab 6.2 durch einen echten `tsc`-Build ersetzt, sobald das TypeScript-Setup steht. Die Workflow-Datei selbst ändert sich dabei nicht - nur der Inhalt der `package.json`-Skripte.
 
 ---
 

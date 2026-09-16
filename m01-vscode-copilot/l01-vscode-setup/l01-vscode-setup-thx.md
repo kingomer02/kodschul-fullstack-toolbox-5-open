@@ -31,6 +31,13 @@ Im integrierten Terminal mit `node -v`, `git --version` und `docker --version` -
 
 </details>
 
+<details>
+<summary>Welche Copilot-Einstellungen sind für den Datenschutz relevant?</summary>
+
+"Copilot -> Enable/Disable" pro Sprache sowie die Einstellung, ob Codevorschläge aus öffentlichem Code ausgeschlossen werden (`github.copilot.advanced.contentExclusions` bzw. die Organisationsrichtlinie) - in Firmenumgebungen regelt das die IT/der Datenschutzbeauftragte, nicht jede einzelne Person.
+
+</details>
+
 ---
 
 ## Warum VS Code als Cockpit?
@@ -66,6 +73,15 @@ Eine `.vscode/settings.json` im Projektordner sorgt dafür, dass alle Teilnehmer
 **Grenze:** persönliche Einstellungen (Theme, Tastenkürzel) bleiben im User-Profil, nicht im Projekt-Workspace.
 
 - Sonst überschreibt jeder Commit die Vorlieben der anderen.
+
+---
+
+## Copilot: Datenschutz und Ausschlüsse
+
+- Firmen-/Kunden-Repos können per Content-Exclusion-Regel bestimmte Dateien/Ordner von Copilot-Vorschlägen ausschließen (z. B. Secrets-Ordner).
+- Ob Codevorschläge auf Basis öffentlicher Trainingsdaten erlaubt sind, wird meist zentral über die GitHub-Organisation festgelegt, nicht lokal je Person.
+
+**Für diesen Kurs:** die Standardeinstellungen genügen, da TeamBoard ein Übungsprojekt ohne echte Geheimnisse ist - im echten Projektalltag vorher mit IT/Datenschutz klären.
 
 ---
 

@@ -52,3 +52,23 @@ dist/
 ## Grenzen
 
 `index.ts` enthält noch keine echte Serverlogik - Express kommt erst mit der REST-API in Modul 14 dazu.
+
+## Aufgabe 5: CI-Platzhalter ersetzen
+
+```json
+{
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  }
+}
+```
+
+```bash
+git add backend/package.json
+git commit -m "ci: replace placeholder scripts with real tsc lint/build"
+git push
+```
+
+Die Pipeline aus Modul 4 prüft ab jetzt echten TypeScript-Code, nicht mehr nur `echo`-Platzhalter.

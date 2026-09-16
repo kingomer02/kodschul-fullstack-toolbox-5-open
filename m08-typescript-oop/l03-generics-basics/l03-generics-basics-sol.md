@@ -53,3 +53,45 @@ console.log(labelRepo.findById("l-1")); // { id: "l-1", label: "urgent" }
 ## Grenzen
 
 `Repository<T>` speichert weiterhin nur im Arbeitsspeicher - Persistenz (MongoDB) kommt in Modul 15 als eigener Baustein hinzu, ohne dass sich dieses Interface grundlegend ändert.
+
+## Aufgabe 5-6: `TicketService`
+
+```ts
+// backend/src/services/ticket-service.ts
+import { Ticket } from "../models/ticket";
+import { TicketRepository } from "../repositories/ticket-repository";
+
+export class TicketService {
+  constructor(private repository: TicketRepository) {}
+
+  moveToNextStatus(id: string): Ticket | undefined {
+    const ticket = this.repository.findById(id);
+    if (!ticket) return undefined;
+
+    const order: Ticket["status"][] = ["To Do", "In Progress", "Done"];
+    const nextIndex = Math.min(
+      order.indexOf(ticket.status) + 1,
+      order.length - 1
+    );
+    ticket.status = order[nextIndex];
+    return ticket;
+  }
+}
+```
+
+```ts
+const repo = new TicketRepository();
+repo.add({
+  id: "t-1",
+  title: "Setup Repo",
+  description: "Initial repo structure",
+  assignee: "Alex",
+  status: "To Do",
+});
+
+const service = new TicketService(repo);
+service.moveToNextStatus("t-1"); // status wird "In Progress"
+service.moveToNextStatus("t-1"); // status wird "Done"
+```
+
+`repository` ist `private`, weil `TicketService` es nur intern braucht - Außencode ruft ausschließlich `moveToNextStatus` auf, nicht `repository.findById` direkt.

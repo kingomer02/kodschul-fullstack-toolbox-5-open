@@ -50,6 +50,8 @@ npm install express
 npm install --save-dev typescript
 ```
 
+**Warum `express` schon jetzt, obwohl die REST-API erst in Modul 14 entsteht?** Damit das Backend-Projekt von Anfang an eine realistische `package.json` hat und die CI-Pipeline (Modul 4) sowie das TypeScript-Setup (Modul 6) gegen eine echte Abhängigkeit statt gegen ein leeres Projekt arbeiten - verwendet wird `express` selbst aber erst ab Modul 14.
+
 | Befehl                         | Zielort in `package.json` |
 | ------------------------------ | ------------------------- |
 | `npm install <pkg>`            | `dependencies`            |

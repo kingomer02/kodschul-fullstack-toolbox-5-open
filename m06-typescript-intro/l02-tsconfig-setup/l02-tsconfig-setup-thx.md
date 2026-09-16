@@ -86,4 +86,22 @@ Erzeugt eine Datei mit vielen auskommentierten Optionen als Ausgangspunkt.
 
 `npm run build` kompiliert `src/` fehlerfrei nach `dist/`; die CI-Pipeline aus Modul 4 kann `npm run build` jetzt echt statt als Platzhalter ausführen.
 
+---
+
+## CI-Pipeline von Platzhaltern auf echten Build umstellen
+
+In Modul 4 enthielt `package.json` nur Platzhalter-Skripte (`"lint": "echo ..."`, `"build": "echo ..."`). Jetzt werden sie durch die echten Skripte aus diesem Lab ersetzt:
+
+```json
+{
+  "scripts": {
+    "lint": "tsc --noEmit",
+    "build": "tsc"
+  }
+}
+```
+
+- Die Workflow-Datei `.github/workflows/ci.yml` selbst bleibt unverändert - sie ruft weiterhin nur `npm run lint`/`npm run build` auf.
+- Ein Push mit dieser Änderung lässt die Pipeline erstmals echte TypeScript-Fehler erkennen, statt immer grün zu sein.
+
 Weiter geht es mit Modul 7: TypeScript-Grundlagen (Basistypen, Interfaces, Datenmodelle).

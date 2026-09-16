@@ -54,6 +54,21 @@ Diese Befehle beantworten "Wer hat wann was geändert?".
 
 ---
 
+## Zeilenenden über Betriebssysteme hinweg
+
+In gemischten Teams (Windows/macOS/Linux) zeigt `git status` sonst scheinbar geänderte Dateien, obwohl nur die Zeilenenden (CRLF vs. LF) abweichen.
+
+```gitattributes
+# .gitattributes
+* text=auto eol=lf
+```
+
+- `.gitattributes` normalisiert Zeilenenden beim Commit/Checkout, unabhängig vom lokalen Editor-/OS-Standard.
+
+**Grenze:** ersetzt keine persönliche Editor-Konfiguration - `.vscode/settings.json` (`files.eol`, Modul 1) und `.gitattributes` ergänzen sich, statt sich zu widersprechen.
+
+---
+
 ## Checkpoint
 
 Du kannst für einen beliebigen Commit im TeamBoard-Repo Autor, Zeitpunkt und geänderte Zeilen anzeigen.

@@ -59,3 +59,9 @@ docker run hello-world
 `docker run hello-world` läuft ohne Fehler und gibt die Bestätigungsmeldung von Docker aus.
 
 Weiter geht es mit Lab 10.2: Container vs. virtuelle Maschinen.
+
+---
+
+## Projektbezug
+
+Ab diesem Modul wird TeamBoard schrittweise containerisiert. Halte in einer eigenen Notiz (z. B. `teamboard/docs/architecture-sketch.md`) fest, welche Komponenten künftig als eigene Container laufen sollen - Lab 10.3 baut darauf auf, Modul 11-13 setzen es um.
