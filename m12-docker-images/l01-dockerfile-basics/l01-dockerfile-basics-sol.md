@@ -12,7 +12,7 @@ console.log(`Hello, ${name}!`);
 
 ```dockerfile
 # sample-app/Dockerfile
-FROM node:20-alpine
+FROM node:24-alpine
 WORKDIR /app
 COPY greet.js .
 ENV GREET_NAME=Docker

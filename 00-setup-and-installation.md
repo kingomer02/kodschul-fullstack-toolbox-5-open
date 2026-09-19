@@ -38,7 +38,7 @@ code --install-extension GitHub.copilot-chat
 | Prettier                      | Modul 1      |
 | Docker                        | Modul 10     |
 | GitLens                       | Modul 2      |
-| GitHub Copilot / Copilot Chat | Modul 1      |
+| GitHub Copilot / Copilot Chat (in VS Code ab 1.138 eingebaut, nur Anmeldung nötig) | Modul 1      |
 
 ## Vollständigkeits-Check (vor Modul 1)
 

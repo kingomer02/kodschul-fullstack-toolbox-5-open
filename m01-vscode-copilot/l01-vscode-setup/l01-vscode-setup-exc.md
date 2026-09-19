@@ -15,6 +15,8 @@ Du startest mit einer Standard-VS-Code-Installation ohne kursspezifische Konfigu
 ## Aufgaben
 
 1. Installiere die vier Kurs-Erweiterungen: ESLint, Prettier, Docker, GitLens.
+
+> **Korrektur (Durchlauf 09/2026, Ö. Akgeyik):** **GitHub Copilot ist nicht darunter und lässt sich auch nicht mehr installieren.** Seit VS Code 1.138 ist Copilot fest eingebaut; die Installation über den Marketplace schlägt fehl. Stattdessen: unten rechts in der Statusleiste auf das Copilot-Symbol klicken und sich am GitHub-Konto anmelden. Das genügt für Lab 1.2.
 2. Lege im Ordner `vscode-setup-uebung/` eine Datei `.vscode/settings.json` mit `editor.formatOnSave: true` und `editor.defaultFormatter` auf Prettier an.
 3. Lege eine Datei `beispiel.js` mit inkonsistenter Formatierung an (z. B. unterschiedliche Einrückung) und speichere sie. Beobachte, was passiert.
 4. Öffne ein VS-Code-Terminal und führe `node -v`, `git --version`, `docker --version` aus. Notiere die Ausgaben.

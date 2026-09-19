@@ -4,8 +4,8 @@
 
 ```bash
 docker images | grep teamboard-backend
-# teamboard-backend   multistage   <id>   ~180MB
-# teamboard-backend   latest       <id>   ~220MB (Richtwert, enthält devDependencies)
+# teamboard-backend   multistage   <id>   249MB  (gemessen 09/2026)
+# teamboard-backend   latest       <id>   293MB  (Single-Stage, gemessen 09/2026)
 ```
 
 ## Aufgabe 2: `docker history`
@@ -14,7 +14,7 @@ docker images | grep teamboard-backend
 docker history teamboard-backend:multistage
 ```
 
-Die größte Schicht ist typischerweise `RUN npm ci --omit=dev` bzw. die `FROM node:20-alpine`-Basisschicht selbst.
+Die größte Schicht ist typischerweise `RUN npm ci --omit=dev` bzw. die `FROM node:24-alpine`-Basisschicht selbst.
 
 ## Aufgabe 3: Rebuild ohne Änderung
 
@@ -34,4 +34,4 @@ Nach einer Änderung an `backend/package.json`: bereits `COPY package.json packa
 
 ## Grenzen
 
-Die genannten Größen sind Richtwerte - Basis-Image-Updates von `node:20-alpine` können sie leicht verschieben; die relative Aussage (Multi-Stage kleiner als Single-Stage) bleibt bestehen.
+Die genannten Größen sind Richtwerte - Basis-Image-Updates von `node:24-alpine` können sie leicht verschieben; die relative Aussage (Multi-Stage kleiner als Single-Stage) bleibt bestehen.

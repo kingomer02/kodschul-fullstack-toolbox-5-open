@@ -13,7 +13,7 @@ services:
       MONGO_URL: mongodb://mongo:27017/teamboard
 
   mongo:
-    image: mongo:7
+    image: mongo:8
     volumes:
       - mongo-data:/data/db
 

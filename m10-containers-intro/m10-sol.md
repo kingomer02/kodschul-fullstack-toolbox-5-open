@@ -5,7 +5,7 @@
 ```md
 # Container-Plan TeamBoard
 
-- Backend (Node/TS): eigener Dockerfile nötig, Basis-Image `node:20-alpine` (klein, offizielles Node-Image).
+- Backend (Node/TS): eigener Dockerfile nötig, Basis-Image `node:24-alpine` (klein, offizielles Node-Image).
 - MongoDB: fertiges Image `mongo` aus der Registry, kein eigener Dockerfile nötig.
 - Offene Fragen: Wie kommt der TypeScript-Build (dist/) ins Image? Multi-Stage-Build nötig? Wie verbinden sich Backend und MongoDB im selben Compose-Netzwerk?
 ```

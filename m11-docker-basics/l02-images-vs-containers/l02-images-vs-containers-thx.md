@@ -25,7 +25,7 @@ Container schreiben in eine eigene, container-spezifische Schicht ("Copy-on-Writ
 </details>
 
 <details>
-<summary>Wofür steht ein Image-Tag wie `node:20-alpine`?</summary>
+<summary>Wofür steht ein Image-Tag wie `node:24-alpine`?</summary>
 
 `node` ist das Repository/der Image-Name, `20-alpine` der Tag - hier: Node.js-Version 20 auf Basis des schlanken Alpine-Linux-Unterbaus.
 
@@ -48,15 +48,15 @@ docker run --name c2 -d nginx
 ## Tags und Image-Größe vergleichen
 
 ```bash
-docker pull node:20
-docker pull node:20-alpine
+docker pull node:24
+docker pull node:24-alpine
 docker images
 ```
 
 | Tag              | Typische Größe (Richtwert) | Grund                                              |
 | ---------------- | -------------------------- | -------------------------------------------------- |
-| `node:20`        | groß (~1 GB)               | vollständiges Debian-Basis-Image mit vielen Tools  |
-| `node:20-alpine` | klein (~150-200 MB)        | schlankes Alpine-Linux, nur das Nötigste enthalten |
+| `node:24`        | groß (1,64 GB, gemessen 09/2026) | vollständiges Debian-Basis-Image mit vielen Tools  |
+| `node:24-alpine` | klein (238 MB, gemessen 09/2026) | schlankes Alpine-Linux, nur das Nötigste enthalten |
 
 **Grenze:** Alpine-Images verwenden `musl` statt `glibc` - in seltenen Fällen kann das bei nativen Node-Modulen zu Kompatibilitätsproblemen führen. Für TeamBoard ist das unkritisch.
 

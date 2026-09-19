@@ -5,7 +5,7 @@
 
 ## Aufgaben
 
-1. Lade zwei Varianten desselben Images: `docker pull node:20` und `docker pull node:20-alpine`.
+1. Lade zwei Varianten desselben Images: `docker pull node:24` und `docker pull node:24-alpine`.
 2. Vergleiche die Größen mit `docker images` und notiere den Größenunterschied.
 3. Starte zwei benannte Container aus demselben Image: `docker run --name c1 -d nginx` und `docker run --name c2 -d nginx`.
 4. Erzeuge in `c1` eine Testdatei: `docker exec c1 sh -c "echo hallo > /tmp/test.txt"`. Prüfe danach mit `docker exec c2 ls /tmp`, dass die Datei dort **nicht** existiert.
@@ -13,7 +13,7 @@
 
 ## Checkpoint
 
-- `docker images` zeigt eine deutlich kleinere Größe für `node:20-alpine` als für `node:20`.
+- `docker images` zeigt eine deutlich kleinere Größe für `node:24-alpine` als für `node:24`.
 - Die Testdatei existiert nur in `c1`, nicht in `c2`.
 
 ## Abschlusskriterien

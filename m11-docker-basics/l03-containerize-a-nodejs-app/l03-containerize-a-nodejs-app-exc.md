@@ -9,7 +9,7 @@
 
 ## Aufgaben
 
-1. Lege `backend/Dockerfile` an, das: Node 20 (Alpine) als Basis nutzt, zuerst `package.json`/`package-lock.json` kopiert und `npm ci` ausführt, dann den restlichen Code kopiert, mit `npm run build` baut und per `CMD` `node dist/index.js` startet.
+1. Lege `backend/Dockerfile` an, das: Node 24 (Alpine) als Basis nutzt, zuerst `package.json`/`package-lock.json` kopiert und `npm ci` ausführt, dann den restlichen Code kopiert, mit `npm run build` baut und per `CMD` `node dist/index.js` startet.
 2. Lege `backend/.dockerignore` mit `node_modules`, `dist` und `.git` an.
 3. Baue das Image: `docker build -t teamboard-backend backend/` (Build-Kontext ist der `backend/`-Ordner).
 4. Starte einen Container daraus und prüfe die Logs.

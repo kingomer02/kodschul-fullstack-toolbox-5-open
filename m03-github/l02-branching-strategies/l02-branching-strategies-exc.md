@@ -1,7 +1,9 @@
 # Lab 3.2 - Übung: Branching-Strategien im Team
 
 **Dauer:** ca. 25 Minuten
-**Ändert die TeamBoard-Projektbasis?** Nein - der generische Teil nutzt ein Übungsrepo; der TeamBoard-Branch wird erst in Lab 3.3 gemerged.
+**Ändert die TeamBoard-Projektbasis?** Ja - der Branch `feature/setup` wird hier lokal in `main` gemerged.
+
+> **Korrektur (Durchlauf 09/2026, Ö. Akgeyik):** Im Original stand hier „Nein - der generische Teil nutzt ein Übungsrepo; der TeamBoard-Branch wird erst in Lab 3.3 gemerged.“ Das widerspricht Aufgabe 4, die den Merge ausdrücklich verlangt, und der Ausgangslage, die auf das TeamBoard-Repo aus Lab 3.1 verweist. Wir führen den Merge bewusst im TeamBoard aus - einmal im Terminal zu sehen, wie ein Konflikt entsteht und aufgelöst wird, ist den Aufwand wert. Folge: `feature/setup` ist danach aufgebraucht, **Lab 3.3 legt deshalb einen neuen Branch an.**
 
 ## Ausgangslage
 

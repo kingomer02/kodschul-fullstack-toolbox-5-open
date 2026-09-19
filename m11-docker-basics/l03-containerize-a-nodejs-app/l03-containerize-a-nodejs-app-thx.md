@@ -37,7 +37,7 @@ Damit Docker die Abhängigkeits-Schicht separat cachen kann - ändert sich nur d
 
 ```dockerfile
 # backend/Dockerfile
-FROM node:20-alpine
+FROM node:24-alpine
 
 WORKDIR /app
 
@@ -50,7 +50,7 @@ RUN npm run build
 CMD ["node", "dist/index.js"]
 ```
 
-- `FROM node:20-alpine`: schlankes Basis-Image, wie in Modul 10 geplant.
+- `FROM node:24-alpine`: schlankes Basis-Image, wie in Modul 10 geplant.
 - `WORKDIR /app`: alle folgenden Befehle laufen relativ zu `/app` im Container.
 - Die Reihenfolge (erst `package.json`, dann `npm ci`, dann restlicher Code) nutzt Docker-Layer-Caching - Details dazu folgen in Modul 12.
 

@@ -3,12 +3,12 @@
 ## Aufgabe 1-2: Images laden und vergleichen
 
 ```bash
-docker pull node:20
-docker pull node:20-alpine
+docker pull node:24
+docker pull node:24-alpine
 docker images
 ```
 
-Erwartung: `node:20` liegt bei ca. 1 GB, `node:20-alpine` bei ca. 150-200 MB - ein Unterschied von mehreren hundert MB.
+Erwartung: `node:24` liegt bei **1,64 GB**, `node:24-alpine` bei **238 MB** (gemessen 09/2026) - ein Unterschied von mehreren hundert MB.
 
 ## Aufgabe 3: Zwei Container aus einem Image
 

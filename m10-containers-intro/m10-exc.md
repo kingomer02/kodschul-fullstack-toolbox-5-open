@@ -15,7 +15,7 @@ Die Begriffe aus den drei Labs (WSL 2, Container vs. VM, Container-Ökosystem) a
 ## Aufgaben
 
 1. Skizziere in einer kurzen Notiz, welche TeamBoard-Komponenten künftig als eigene Container laufen sollen (mindestens: Backend, MongoDB) und ob dafür ein fertiges Registry-Image oder ein eigener Dockerfile nötig ist (Bezug zu Lab 10.3, Aufgabe 4).
-2. Notiere, welches Basis-Image für das Node/TypeScript-Backend sinnvoll erscheint (z. B. `node:20-alpine`) und begründe kurz warum.
+2. Notiere, welches Basis-Image für das Node/TypeScript-Backend sinnvoll erscheint (z. B. `node:24-alpine`) und begründe kurz warum.
 3. Halte 2-3 offene Fragen fest, die du dir für Modul 11 (Dockerfile schreiben) merken willst.
 
 ## Checkpoint

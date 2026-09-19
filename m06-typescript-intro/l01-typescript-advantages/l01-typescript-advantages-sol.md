@@ -8,7 +8,9 @@ function discount(price, percent) {
   return price - (price * percent) / 100;
 }
 
-console.log(discount(100, "10")); // "NaN" oder unerwartetes Verhalten, kein Fehler beim Ausführen
+console.log(discount(100, "10")); // 90 - JavaScript wandelt "10" still in eine Zahl um
+console.log(discount(100, null));  // 100 - null wird zu 0
+console.log(discount(100, []));    // 100 - ein leeres Array wird zu 0
 ```
 
 ## Aufgabe 3: TypeScript-Version

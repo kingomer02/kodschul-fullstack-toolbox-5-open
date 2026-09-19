@@ -16,7 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: echo "Hello CI"
 ```
 
@@ -32,15 +32,15 @@ jobs:
 
 | Action                  | Zweck                                                                   |
 | ----------------------- | ----------------------------------------------------------------------- |
-| `actions/checkout@v4`   | Repo-Inhalt in den Runner auschecken                                    |
-| `actions/setup-node@v4` | Node.js-Version installieren (Option `cache: npm` für schnellere Läufe) |
+| `actions/checkout@v7`   | Repo-Inhalt in den Runner auschecken                                    |
+| `actions/setup-node@v7` | Node.js-Version installieren (Option `cache: npm` für schnellere Läufe) |
 
 ## Node/NPM-Pipeline-Bausteine
 
 ```yaml
-- uses: actions/setup-node@v4
+- uses: actions/setup-node@v7
   with:
-    node-version: 20
+    node-version: 24
     cache: npm
 - run: npm ci
 - run: npm run lint
