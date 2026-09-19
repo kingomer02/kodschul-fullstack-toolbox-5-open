@@ -24,7 +24,7 @@ Ein typisiertes `Ticket`-Interface (Modul 7) verhindert, dass später fehlerhaft
 **Zustand und Logik in separaten Klassen halten (`TicketRepository` vs. `TicketService`).**
 Datenhaltung (Repository) und fachliche Regeln (Service, z. B. Statuswechsel) bleiben unabhängig austauschbar - ein Wechsel von In-Memory zu MongoDB (Modul 15) betrifft dadurch **hauptsächlich** das Repository.
 
-> **Korrektur (Durchlauf 09/2026, Ö. Akgeyik):** Im Original stand hier „betrifft dadurch nur das Repository, nicht den Service“. Das stimmt so nicht: Der Zugriff auf MongoDB ist asynchron, und `async`/`await` zieht sich durch alle aufrufenden Schichten - der Service muss also mitgeändert werden. Die Trennung spart trotzdem Arbeit, aber sie ist keine Garantie dafür, dass eine Schicht unberührt bleibt.
+> **Einschränkung:** Der Zugriff auf MongoDB ist asynchron, und `async`/`await` zieht sich durch alle aufrufenden Schichten - der Service muss also mitgeändert werden. Die Trennung spart Arbeit, sie garantiert aber nicht, dass eine Schicht unberührt bleibt.
 
 **Generics (`Repository<T>`) nutzen, statt Datenhaltungscode für jede Ressource zu duplizieren.**
 Eine einzige, getestete Implementierung deckt sowohl Tickets als auch zukünftige Ressourcen ab, ohne Code zu wiederholen.

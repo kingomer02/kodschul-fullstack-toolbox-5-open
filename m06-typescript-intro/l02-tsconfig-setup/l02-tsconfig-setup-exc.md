@@ -15,7 +15,7 @@
 4. Führe `npm run build` und danach `npm run start` aus und prüfe die Ausgabe.
 5. Ersetze in `backend/package.json` die Platzhalter-Skripte aus Modul 4 (`"lint": "echo ..."`, `"build": "echo ..."`) durch `"lint": "tsc --noEmit"` und `"build": "tsc"`. **Ergänze dann in `.github/workflows/ci.yml` bei den Schritten `npm ci`, `npm run lint` und `npm run build` jeweils `working-directory: backend`**, committe und pushe, und prüfe im Actions-Tab, dass die Pipeline weiterhin grün ist.
 
-> **Korrektur (Durchlauf 09/2026, Ö. Akgeyik):** Ohne diese Ergänzung prüft die Pipeline weiterhin die Platzhalter im Wurzelverzeichnis: Die Skripte werden in `backend/package.json` ersetzt, der Workflow aus Modul 4 läuft aber im Root. Die CI bliebe grün, ohne TypeScript je kompiliert zu haben - der schlimmste Fall, weil er wie Erfolg aussieht.
+> **Warum `working-directory` nötig ist:** Die Skripte werden in `backend/package.json` ersetzt, der Workflow aus Modul 4 läuft aber im Wurzelverzeichnis. Ohne die Ergänzung prüft die Pipeline weiterhin die Platzhalter und bleibt grün, ohne TypeScript je kompiliert zu haben - der schlimmste Fall, weil er wie Erfolg aussieht.
 
 ## Checkpoint
 

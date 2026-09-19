@@ -69,13 +69,10 @@ Alle Details: [`00-setup-and-installation.md`](00-setup-and-installation.md)
 
 ---
 
-## Hinweis zu dieser Fassung
+## Zu dieser Fassung
 
-Dies ist ein **Fork** von [`kodschul/kodschul-fullstack-toolbox-5-open`](https://github.com/kodschul/kodschul-fullstack-toolbox-5-open).
-Das Original stammt von Kodschul. Für den Durchlauf **21.–25.09.2026 (webFDT, ETC Wien)** wurden
-Stellen korrigiert, die beim vollständigen Durcharbeiten nicht funktioniert haben oder sich
-widersprachen — veraltete Versionen, Übungen mit unerreichbaren Checkpoints und Labs, die Dateien
-voraussetzen, die vorher nie entstehen.
-
-Jede Änderung ist im Text als `**Korrektur (Durchlauf 09/2026, Ö. Akgeyik):**` gekennzeichnet.
-Die vollständige Liste steht in [`KORREKTUREN.md`](KORREKTUREN.md).
+Diese Unterlagen sind eine überarbeitete Fassung des Kursmaterials von
+[Kodschul](https://github.com/kodschul/kodschul-fullstack-toolbox-5-open), erstellt für den
+Durchlauf **webFDT, 21.–25.09.2026 (ETC Wien)**. Jedes Lab wurde vorab ausgeführt und die
+Unterlagen auf den aktuellen Versionsstand gebracht: Node 24 LTS, `actions/checkout@v7`,
+MongoDB 8, `@apollo/server`.

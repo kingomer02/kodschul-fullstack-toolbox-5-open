@@ -22,7 +22,7 @@
 - Alle drei getesteten `/tickets`-Routen liefern ohne Token `401` und mit gültigem Token den erwarteten Erfolgscode.
 - **Zusatzaufgabe:** Ruft `POST /graphql` **ohne** Token auf und seht euch das Ergebnis an.
 
-> **Korrektur (Durchlauf 09/2026, Ö. Akgeyik):** `app.use("/tickets", requireAuth)` sichert ausschließlich die REST-Routen. **Der GraphQL-Endpunkt bleibt völlig offen.** Gemessen: `GET /tickets` → `401`, `POST /graphql` → **`200` mit allen Daten**. Die Anwendung wirkt abgesichert und ist es nicht. Wer alles schützen will, muss die Middleware auch vor `/graphql` hängen - oder die Prüfung in den GraphQL-Kontext legen.
+> **Das Ergebnis der Zusatzaufgabe:** `app.use("/tickets", requireAuth)` sichert ausschließlich die REST-Routen. Der GraphQL-Endpunkt bleibt offen: `GET /tickets` → `401`, `POST /graphql` → **`200` mit allen Daten**. Die Anwendung wirkt abgesichert und ist es nicht. Wer alles schützen will, hängt die Middleware auch vor `/graphql` - oder legt die Prüfung in den GraphQL-Kontext.
 
 ## Abschlusskriterien
 

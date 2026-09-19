@@ -9,7 +9,7 @@
 
 ## Aufgaben
 
-> **Korrektur (Durchlauf 09/2026, Ö. Akgeyik):** Die Pakete `apollo-server` und `apollo-server-express` sind seit November 2023 abgekündigt und erhalten keine Sicherheitsupdates mehr. Nehmt stattdessen **`@apollo/server`** zusammen mit **`@as-integrations/express4`**. Die Importe ändern sich entsprechend: `import { ApolloServer } from "@apollo/server"`, `import { expressMiddleware } from "@as-integrations/express4"`, und `gql` kommt aus `graphql-tag`.
+> **Paketwahl:** `apollo-server` und `apollo-server-express` sind seit November 2023 abgekündigt und erhalten keine Sicherheitsupdates mehr. Nehmt **`@apollo/server`** zusammen mit **`@as-integrations/express4`**. Die Importe entsprechend: `import { ApolloServer } from "@apollo/server"`, `import { expressMiddleware } from "@as-integrations/express4"`; `gql` kommt aus `graphql-tag`.
 
 1. Installiere im `backend/`-Ordner `mongodb`, `apollo-server-express` und `graphql`.
 2. Stelle `TicketRepository` auf eine echte MongoDB-Collection um (`connect`, `add`, `findById`, `getAll` als `async`-Methoden, siehe Theorieteil).

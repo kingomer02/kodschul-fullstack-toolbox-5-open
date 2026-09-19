@@ -21,7 +21,7 @@
 
 - `GET /tickets` liefert die Beispieltickets aus Modul 7.
 
-> **Korrektur (Durchlauf 09/2026, Ö. Akgeyik):** Das Original spricht von „den drei Beispieltickets aus Modul 7“ - dort sind es **zwei**. Entweder ihr ergänzt in Modul 7 ein drittes Ticket, oder ihr erwartet hier zwei. Wichtig ist nur, dass beide Stellen dieselbe Zahl nennen.
+> **Hinweis:** Wie viele Tickets hier zurückkommen, hängt davon ab, wie viele ihr in Modul 7 angelegt habt - erwartet genau diese Zahl.
 - `PATCH /tickets/t-1/status` bewegt das Ticket sichtbar einen Status weiter.
 - `GET /tickets/unbekannte-id` liefert Status `404`.
 

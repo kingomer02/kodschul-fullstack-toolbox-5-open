@@ -16,8 +16,6 @@ Die CI-Pipeline aus Lab 4.1/4.2 nicht nur einmal grün sehen, sondern bewusst du
 1. Erstelle einen neuen Branch `feature/ci-badge`.
 2. Ändere versehentlich (absichtlich) `"lint": "exit 1"` in `package.json`, committe und pushe. Öffne einen PR und beobachte den roten Check.
 3. Setze das Lint-Skript im selben Branch wieder auf einen erfolgreichen Zustand zurück (z. B. `"echo \"lint ok\""`), committe erneut, push - beobachte den grünen Check.
-> **Korrektur (Durchlauf 09/2026, Ö. Akgeyik):** Das `README.md` existiert, weil es in **Lab 3.3** angelegt wurde. Im Originalablauf gibt es an dieser Stelle nur `README-draft.md` - die Aufgabe liefe ins Leere.
-
 4. Ergänze im Root-`README.md` einen Abschnitt "CI Status" mit einer Badge-Zeile: `![CI](https://github.com/<user>/teamboard/actions/workflows/ci.yml/badge.svg)`.
 5. Merge den PR.
 

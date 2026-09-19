@@ -7,7 +7,7 @@
 
 Copilot Chat ist in VS Code verfügbar und am GitHub-Konto angemeldet (Lab 1.1).
 
-> **Korrektur (Durchlauf 09/2026, Ö. Akgeyik):** Copilot wird nicht mehr installiert - seit VS Code 1.138 ist es eingebaut. Es muss nur die Anmeldung am GitHub-Konto stehen.
+> **Hinweis:** Copilot wird nicht installiert - seit VS Code 1.138 ist es in VS Code eingebaut. Es muss nur die Anmeldung am GitHub-Konto stehen.
 
 ## Aufgaben
 

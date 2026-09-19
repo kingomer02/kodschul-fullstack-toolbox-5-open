@@ -11,7 +11,7 @@ Ein lauffähiges TypeScript-Setup existiert (Modul 6).
 
 1. Schreibe eine Klasse `Notification` mit Konstruktor-Parameter `message: string` und einer Methode `send(): string`, die die Nachricht zurückgibt.
 
-> **Korrektur (Durchlauf 09/2026, Ö. Akgeyik):** `class Notification` kollidiert mit dem gleichnamigen Browser-Typ und bricht mit `TS2300: Duplicate identifier 'Notification'` ab, sobald die DOM-Typen geladen sind. Behebung: in der `tsconfig.json` unter `compilerOptions` **`"lib": ["ES2022"]`** setzen - damit werden die DOM-Typen nicht eingebunden. Alternative, falls die DOM-Typen gebraucht werden: die Klasse umbenennen, z. B. in `AppNotification`.
+> **Achtung:** `class Notification` kollidiert mit dem gleichnamigen Browser-Typ und bricht mit `TS2300: Duplicate identifier 'Notification'` ab, sobald die DOM-Typen geladen sind. Setzt in der `tsconfig.json` unter `compilerOptions` **`"lib": ["ES2022"]`** - damit werden die DOM-Typen nicht eingebunden. Wer die DOM-Typen braucht, benennt die Klasse um, z. B. in `AppNotification`.
 2. Leite `EmailNotification extends Notification` ab, die zusätzlich einen `recipient: string` im Konstruktor entgegennimmt.
 3. Überschreibe `send()` in `EmailNotification` so, dass sie `super.send()` nutzt und den Empfänger ergänzt.
 4. Instanziiere beide Klassen und rufe jeweils `send()` auf.

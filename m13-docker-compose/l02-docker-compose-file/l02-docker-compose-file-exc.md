@@ -20,7 +20,7 @@
 
 - `docker compose ps` zeigt `mongo` als `running`; `backend` läuft einmal durch und endet mit `Exited (0)`.
 
-> **Korrektur (Durchlauf 09/2026, Ö. Akgeyik):** Das Original verlangt hier `backend` als `running`. Das ist zu diesem Zeitpunkt **nicht erreichbar**: `index.ts` ist ein Skript, kein Server - Lab 11.3 sagt das selbst. Der Container startet, führt das Skript aus und beendet sich ordentlich mit Code 0. Ein dauerhaft laufender `backend`-Service entsteht erst in Modul 14 mit Express - das ist die Überleitung auf Tag 4.
+> **Warum `backend` nicht dauerhaft läuft:** `index.ts` ist ein Skript, kein Server - der Container startet, führt es aus und beendet sich ordentlich mit Code 0. Ein dauerhaft laufender Service entsteht erst in Modul 14 mit Express.
 - Der `backend`-Container kann den Hostnamen `mongo` auflösen.
 
 ## Abschlusskriterien
