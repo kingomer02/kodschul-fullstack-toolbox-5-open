@@ -8,8 +8,8 @@ Zentrale Checkliste für alles, was vor bzw. während Modul 1-10 installiert und
 | ----------------------- | ------------------------ | --------------------------- | ------------ |
 | VS Code                 | aktuelle stabile Version | `code --version`            | Modul 1      |
 | Git                     | aktuelle stabile Version | `git --version`             | Modul 2      |
-| Node.js (LTS)           | 20.x LTS                 | `node --version`            | Modul 5      |
-| npm (kommt mit Node.js) | 10.x                     | `npm --version`             | Modul 5      |
+| Node.js (LTS)           | 24.x LTS                 | `node --version`            | Modul 5      |
+| npm (kommt mit Node.js) | 11.x                     | `npm --version`             | Modul 5      |
 | Docker Desktop          | aktuelle stabile Version | `docker --version`          | Modul 10     |
 | GitHub-Account          | -                        | Login auf github.com prüfen | Modul 3      |
 
@@ -28,9 +28,9 @@ code --install-extension dbaeumer.vscode-eslint
 code --install-extension esbenp.prettier-vscode
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension eamodio.gitlens
-code --install-extension GitHub.copilot
-code --install-extension GitHub.copilot-chat
 ```
+
+> **GitHub Copilot wird nicht installiert.** Seit VS Code 1.138 ist Copilot eingebaut, `code --install-extension GitHub.copilot` schlägt fehl. Es genügt, sich in VS Code am GitHub-Konto anzumelden.
 
 | Erweiterung                   | Gebraucht ab |
 | ----------------------------- | ------------ |
@@ -56,7 +56,7 @@ Alle fünf Befehle müssen eine Versionsnummer liefern, keine Fehlermeldung ("co
 
 | Modul                     | Neu benötigt                                                                      |
 | ------------------------- | --------------------------------------------------------------------------------- |
-| 1 - VS Code/Copilot       | VS Code, GitHub-Copilot-Lizenz/Zugang                                             |
+| 1 - VS Code/Copilot       | VS Code, GitHub-Konto mit Copilot-Zugang (Anmeldung, keine Installation)          |
 | 2 - Git-Grundlagen        | Git                                                                               |
 | 3 - GitHub                | GitHub-Account, Personal Access Token oder SSH-Schlüssel                          |
 | 4 - CI/CD (Actions)       | keine zusätzliche Installation (GitHub Actions läuft in der Cloud)                |
