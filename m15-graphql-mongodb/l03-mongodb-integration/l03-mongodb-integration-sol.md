@@ -4,7 +4,7 @@
 
 ```bash
 cd backend
-npm install mongodb apollo-server-express graphql
+npm install mongodb @apollo/server @as-integrations/express4 graphql graphql-tag
 ```
 
 ## Aufgabe 2: `TicketRepository` mit MongoDB

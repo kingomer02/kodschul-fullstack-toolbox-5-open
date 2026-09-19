@@ -20,7 +20,7 @@ Du bindest den offiziellen MongoDB-Treiber ins Backend ein, ersetzt die In-Memor
 <details>
 <summary>Warum laufen REST und GraphQL im selben Backend-Prozess nebeneinander, statt getrennte Server zu sein?</summary>
 
-`apollo-server-express` lässt sich als zusätzliche Middleware in eine bestehende Express-App einhängen - beide APIs teilen sich denselben Prozess, Port und Datenzugriff über `TicketRepository`.
+`@apollo/server` mit `@as-integrations/express4` lässt sich als zusätzliche Middleware in eine bestehende Express-App einhängen - beide APIs teilen sich denselben Prozess, Port und Datenzugriff über `TicketRepository`.
 
 </details>
 
@@ -30,7 +30,7 @@ Du bindest den offiziellen MongoDB-Treiber ins Backend ein, ersetzt die In-Memor
 
 ```bash
 cd backend
-npm install mongodb apollo-server-express graphql
+npm install mongodb @apollo/server @as-integrations/express4 graphql graphql-tag
 ```
 
 ```ts
@@ -69,7 +69,7 @@ export class TicketRepository {
 
 ```ts
 // backend/src/graphql/schema.ts
-import { gql } from "apollo-server-express";
+import gql from "graphql-tag";
 import { TicketRepository } from "../repositories/ticket-repository";
 
 export const typeDefs = gql`
@@ -115,7 +115,8 @@ export const createResolvers = (repository: TicketRepository) => ({
 
 ```ts
 // backend/src/index.ts (Ergänzung)
-import { ApolloServer } from "apollo-server-express";
+import { ApolloServer } from "@apollo/server";
+import { expressMiddleware } from "@as-integrations/express4";
 import { typeDefs, createResolvers } from "./graphql/schema";
 
 async function start() {

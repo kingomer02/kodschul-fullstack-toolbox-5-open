@@ -9,9 +9,9 @@
 
 ## Aufgaben
 
-> **Paketwahl:** `apollo-server` und `apollo-server-express` sind seit November 2023 abgekündigt und erhalten keine Sicherheitsupdates mehr. Nehmt **`@apollo/server`** zusammen mit **`@as-integrations/express4`**. Die Importe entsprechend: `import { ApolloServer } from "@apollo/server"`, `import { expressMiddleware } from "@as-integrations/express4"`; `gql` kommt aus `graphql-tag`.
+> **Paketwahl:** `apollo-server` und `@apollo/server + @as-integrations/express4` sind seit November 2023 abgekündigt und erhalten keine Sicherheitsupdates mehr. Nehmt **`@apollo/server`** zusammen mit **`@as-integrations/express4`**. Die Importe entsprechend: `import { ApolloServer } from "@apollo/server"`, `import { expressMiddleware } from "@as-integrations/express4"`; `gql` kommt aus `graphql-tag`.
 
-1. Installiere im `backend/`-Ordner `mongodb`, `apollo-server-express` und `graphql`.
+1. Installiere im `backend/`-Ordner `mongodb`, `@apollo/server`, `@as-integrations/express4`, `graphql` und `graphql-tag`.
 2. Stelle `TicketRepository` auf eine echte MongoDB-Collection um (`connect`, `add`, `findById`, `getAll` als `async`-Methoden, siehe Theorieteil).
 3. Passe alle Aufrufstellen in `index.ts` an, damit sie die neuen `async`-Methoden korrekt mit `await` verwenden (inkl. der Routen aus Modul 14).
 4. Erstelle `backend/src/graphql/schema.ts` mit `typeDefs` (Typ `Ticket`, Query `tickets`, Mutation `createTicket`) und passenden Resolvern.
