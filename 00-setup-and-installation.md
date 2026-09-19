@@ -71,4 +71,4 @@ Alle fünf Befehle müssen eine Versionsnummer liefern, keine Fehlermeldung ("co
 
 - Node.js/npm: vom Trainer bereitgestellten npm-Cache/Mirror oder eine Cloud-IDE (z. B. Codespace) nutzen.
 - Docker Desktop: Referenz-Umgebung des Trainers oder Cloud-Terminal mit vorinstalliertem Docker nutzen, lokales Setup parallel zur Pause reparieren.
-- GitHub-Account: Trainer stellt ein Übungsrepo zum Forken bereit, falls kein eigener Account rechtzeitig verfügbar ist.
+- GitHub-Account: Falls nicht rechtzeitig verfügbar, gemeinsam im Repo einer anderen Kursperson arbeiten (als Collaborator) und den eigenen Stand lokal weiterführen.

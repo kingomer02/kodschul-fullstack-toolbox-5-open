@@ -9,7 +9,7 @@ Den kompletten Remote-Workflow aus den drei GitHub-Labs (Push, Branching, Pull R
 
 ## Ausgangslage
 
-- `main` auf GitHub enthält den gemergten Stand aus Lab 3.3 (HTML-Grundgerüst mit Spaltenüberschriften).
+- `main` auf GitHub enthält den gemergten Stand aus Lab 3.3 (`README.md`, dazu das HTML-Grundgerüst mit den Spaltenüberschriften aus Modul 2).
 
 ## Aufgaben
 

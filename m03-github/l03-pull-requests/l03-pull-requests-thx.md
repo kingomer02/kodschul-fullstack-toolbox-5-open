@@ -44,7 +44,7 @@ Merge Commit, Squash and Merge, Rebase and Merge - sie unterscheiden sich darin,
 
 ## Einen PR erstellen
 
-1. Branch pushen: `git push -u origin feature/setup`.
+1. Branch pushen: `git push -u origin feature/readme`.
 2. Auf GitHub: "Compare & pull request" auswählen.
 3. Titel und Beschreibung ausfüllen (was, warum, wie testen).
 4. Reviewer zuweisen (hier: die zweite Kursperson oder der Trainer).
@@ -76,6 +76,6 @@ Merge Commit, Squash and Merge, Rebase and Merge - sie unterscheiden sich darin,
 
 ## Checkpoint
 
-Ein Pull Request für `feature/setup` wurde erstellt, beschrieben und über GitHub gemerged; der Branch ist auf GitHub gelöscht.
+Ein Pull Request für `feature/readme` wurde erstellt, beschrieben und über GitHub gemerged; der Branch ist auf GitHub gelöscht.
 
 Weiter geht es mit Modul 4: Continuous Integration mit GitHub Actions.

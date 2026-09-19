@@ -1,6 +1,10 @@
 # Lab 4.1 - Lösung: Aufbau einer Workflow-Datei
 
-## Aufgabe 1-2: Workflow-Datei
+## Aufgabe 1-2: Branch und Workflow-Datei
+
+```bash
+git checkout -b feature/ci-setup
+```
 
 `.github/workflows/ci.yml`:
 

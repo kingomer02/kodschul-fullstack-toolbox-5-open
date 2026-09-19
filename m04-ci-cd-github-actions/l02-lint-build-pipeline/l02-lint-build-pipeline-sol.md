@@ -4,6 +4,7 @@
 
 ```bash
 npm init -y
+npm install --package-lock-only   # erzeugt die package-lock.json, die npm ci zwingend braucht
 ```
 
 ```json

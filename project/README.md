@@ -10,7 +10,7 @@ This folder holds the parts of TeamBoard that more than one module reuses. Indiv
 | ------------ | -------------------------------------------------------------------------- | ----------------------------------------------- |
 | m01          | Initial README/concept (Copilot-assisted draft)                            | `starter/README-draft.md`                       |
 | m02          | Local Git repository with HTML skeleton                                    | participant-local, see `l02-local-repo-setup`   |
-| m03          | GitHub remote, `feature/setup` branch merged via PR                        | participant GitHub account                      |
+| m03          | GitHub remote, conflict merge locally, `README.md` merged via PR           | participant GitHub account                      |
 | m04          | GitHub Actions lint/build workflow                                         | `checkpoints/day1-ci/.github/workflows/ci.yml`  |
 | m05-m06      | Node.js + TypeScript backend scaffold                                      | `checkpoints/day2-ts-backend/`                  |
 | m07-m08      | Typed `Ticket`/`Status` models, `TicketService`/`TicketRepository` classes | `checkpoints/day2-ts-backend/src/`              |
