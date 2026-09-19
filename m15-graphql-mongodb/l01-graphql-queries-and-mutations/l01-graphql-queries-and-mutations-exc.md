@@ -5,7 +5,7 @@
 
 ## Vorbereitung
 
-- Ein leerer Ordner `sample-graphql/` mit `npm init -y` und `npm install apollo-server graphql` liegt bereit.
+- Ein leerer Ordner `sample-graphql/` mit `npm init -y` und `npm install @apollo/server graphql graphql-tag` liegt bereit.
 
 ## Aufgaben
 
@@ -24,4 +24,4 @@
 
 ## Fallback
 
-Falls `apollo-server` (Standalone) Versionskonflikte verursacht: `apollo-server-express` mit einem minimalen Express-Server als Ersatz verwenden (wird in Lab 15.3 ohnehin eingesetzt).
+Falls der Standalone-Server Versionskonflikte verursacht: `@apollo/server` zusammen mit `@as-integrations/express4` und einem minimalen Express-Server verwenden (wird in Lab 15.3 ohnehin eingesetzt).

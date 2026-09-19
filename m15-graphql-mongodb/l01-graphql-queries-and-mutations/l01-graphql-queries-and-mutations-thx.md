@@ -30,7 +30,9 @@ Bei REST bestimmt der Server, welche Felder eine Antwort enthält; bei GraphQL b
 
 ```ts
 // sample-graphql/src/server.ts
-import { ApolloServer, gql } from "apollo-server";
+import { ApolloServer } from "@apollo/server";
+import { startStandaloneServer } from "@apollo/server/standalone";
+import gql from "graphql-tag";
 
 interface Book {
   id: string;
