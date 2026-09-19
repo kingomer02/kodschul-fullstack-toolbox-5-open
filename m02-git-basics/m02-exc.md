@@ -14,7 +14,9 @@ Die drei Git-Labs (Repo anlegen, erster Commit, Status/Historie) zu einem mehrst
 ## Aufgaben
 
 1. Ergänze `index.html` um die drei Spalten-Überschriften `To Do`, `In Progress`, `Done` innerhalb von `<div id="board">` und committe dies als dritten Commit.
-2. Lege eine `.gitignore`-Datei an (z. B. mit `node_modules/`, `.DS_Store`) und committe sie separat als vierten Commit.
+2. Erweitere die bestehende `.gitignore` um die Dateien, die euer Betriebssystem überall ablegt - macOS `.DS_Store`, Windows `Thumbs.db` und `desktop.ini` - und committe das als vierten Commit.
+
+> **Hinweis:** Die `.gitignore` selbst entsteht bereits in Lab 2.2; hier kommt euer Betriebssystem-Rauschen dazu. Diese Zeilen könnt ihr in eigenen Projekten wiederverwenden.
 3. Sieh dir `git log --oneline --graph` an und vergleiche mit `git diff <erster-commit> <letzter-commit>`, um den Gesamtfortschritt zu erkennen.
 4. Prüfe mit `git status`, dass der Arbeitsbereich vollständig sauber ist (keine offenen Änderungen).
 
