@@ -13,7 +13,7 @@ curl -X POST http://localhost:3000/auth/register \
 ```bash
 curl -X POST http://localhost:3000/auth/register \
   -H "Content-Type: application/json" -d '{"username": "sam", "password": "irgendwas"}'
-# 400 { "error": "username already taken" }
+# 409 { "error": "username already taken" }
 ```
 
 ## Aufgabe 3: Login
@@ -47,7 +47,7 @@ curl http://localhost:3000/tickets -H "Authorization: Bearer ${TOKEN}kaputt"
 
 ## Aufgabe 6: Zusammenfassung
 
-Schritt 2 liefert `400`, weil der Nutzername bereits belegt ist (keine neue Ressource entsteht). Schritt 4 liefert jeweils Erfolgscodes, weil ein gültiger Token vorliegt und die Anfragen inhaltlich korrekt sind. Schritt 5 liefert `401`, weil die Signaturprüfung des manipulierten Tokens fehlschlägt - unabhängig davon, ob der Nutzer an sich berechtigt wäre.
+Schritt 2 liefert `409 Conflict`, weil der Nutzername bereits belegt ist: Die Anfrage ist formal korrekt (sonst wäre es `400`), kollidiert aber mit dem bestehenden Zustand auf dem Server. Schritt 4 liefert jeweils Erfolgscodes, weil ein gültiger Token vorliegt und die Anfragen inhaltlich korrekt sind. Schritt 5 liefert `401`, weil die Signaturprüfung des manipulierten Tokens fehlschlägt - unabhängig davon, ob der Nutzer an sich berechtigt wäre.
 
 ## Grenzen
 

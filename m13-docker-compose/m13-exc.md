@@ -14,7 +14,7 @@ Bestätigen, dass Backend und MongoDB als vollständiger, gemeinsam startbarer S
 ## Aufgaben
 
 1. Führe einen vollständigen, sauberen Durchlauf aus: `docker compose down -v` (falls noch Reste laufen), dann `docker compose up -d --build`.
-2. Prüfe mit `docker compose ps`, dass beide Services laufen, und mit `docker compose logs backend`, dass das Backend ohne Fehler startet.
+2. Prüfe mit `docker compose ps -a`, dass `mongo` läuft und `backend` mit `Exited (0)` sauber durchgelaufen ist, und mit `docker compose logs backend`, dass die gewohnte Ausgabe ohne Fehler erscheint.
 3. Prüfe erneut die Netzwerk-Erreichbarkeit von `mongo` aus `backend` (wie in Lab 13.2).
 4. Fahre alles sauber herunter: `docker compose down`.
 5. Halte in einem Satz fest, was noch fehlt, damit das Backend MongoDB tatsächlich nutzt (Vorschau auf Modul 15).
@@ -34,7 +34,7 @@ docker compose down -v
 docker compose up -d --build
 docker compose ps
 docker compose logs backend
-docker compose exec backend sh -c "apk add --no-cache bind-tools && nslookup mongo"
+docker compose run --rm --entrypoint sh backend -c "getent hosts mongo"
 docker compose down
 ```
 

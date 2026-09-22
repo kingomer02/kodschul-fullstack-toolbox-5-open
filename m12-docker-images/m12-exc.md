@@ -15,7 +15,7 @@ Aus den drei Docker-Image-Labs einen sauberen, alleingültigen Backend-Image-Sta
 
 1. Tagge das Multi-Stage-Image als den neuen `latest`-Stand: `docker tag teamboard-backend:multistage teamboard-backend:latest`.
 2. Entferne den alten Single-Stage-Image-Stand, sofern er unter einem eigenen Tag/ID noch existiert (`docker images`, dann gezielt `docker rmi <image-id>`).
-3. Prüfe mit `docker history teamboard-backend:latest`, dass es sich jetzt tatsächlich um den Multi-Stage-Build handelt (Basis-Schichten erscheinen zweimal wegen der zwei Stages).
+3. Prüfe mit `docker history teamboard-backend:latest`, dass es sich jetzt tatsächlich um den Multi-Stage-Build handelt (erkennbar an `COPY /app/dist ./dist` und `npm ci --omit=dev` - und daran, dass `npm run build` **fehlt**: die Builder-Stage landet nicht im finalen Image).
 4. Starte final einen Container aus `teamboard-backend:latest` und bestätige die gewohnte Ausgabe.
 
 ## Checkpoint

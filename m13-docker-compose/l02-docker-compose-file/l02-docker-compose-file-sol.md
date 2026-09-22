@@ -26,18 +26,21 @@ volumes:
 ```bash
 docker compose up -d
 docker compose ps
-# NAME               STATUS
-# teamboard-backend-1   running
-# teamboard-mongo-1     running
+# NAME                IMAGE     STATUS
+# teamboard-mongo-1   mongo:8   Up 8 seconds
+
+docker compose ps -a
+# backend: Exited (0) - das Skript ist durchgelaufen, kein Absturz
 ```
 
 ## Aufgabe 5: Erreichbarkeit prüfen
 
 ```bash
-docker compose exec backend sh -c "apk add --no-cache bind-tools && nslookup mongo"
-# Name: mongo
-# Address: 172.x.x.x
+docker compose run --rm --entrypoint sh backend -c "getent hosts mongo"
+# 172.22.0.2   mongo  mongo
 ```
+
+`exec` funktioniert hier nicht: Es braucht einen **laufenden** Container, `backend` ist aber schon beendet (`Exited (0)`). `run` startet dafür einen frischen Container aus demselben Service - im selben Netzwerk. `getent` ist im Alpine-Image bereits enthalten, es muss nichts nachinstalliert werden.
 
 ## Aufgabe 6: Herunterfahren und Commit
 

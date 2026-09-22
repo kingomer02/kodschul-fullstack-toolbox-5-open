@@ -57,16 +57,16 @@ volumes:
 ```bash
 docker compose up -d
 docker compose ps
-docker compose exec backend sh -c "apk add --no-cache bind-tools && nslookup mongo"
+docker compose run --rm --entrypoint sh backend -c "getent hosts mongo"
 ```
 
-Erwartung: `nslookup mongo` löst den Servicenamen `mongo` auf eine interne IP im Compose-Netzwerk auf - der Beweis, dass beide Services sich erreichen können.
+Erwartung: `getent hosts mongo` löst den Servicenamen `mongo` auf eine interne IP im Compose-Netzwerk auf - der Beweis, dass beide Services sich erreichen können.
 
 ---
 
 ## Checkpoint
 
-`docker compose ps` zeigt `backend` und `mongo` als laufend; `nslookup mongo` aus dem `backend`-Container liefert eine Adresse.
+`docker compose ps` zeigt `mongo` als laufend, `backend` ist nach einem Durchlauf mit `Exited (0)` beendet (erst ab Modul 14 ist es ein Server); `getent hosts mongo` aus einem `backend`-Container liefert eine Adresse.
 
 ## Projektbezug
 

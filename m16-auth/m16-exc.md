@@ -18,11 +18,11 @@ Registrierung, Login und Ticketzugriff als einen zusammenhängenden Ablauf nachv
 3. Logge dich mit dem neuen Nutzer ein und speichere den Token.
 4. Lege mit diesem Token per `POST /tickets` ein Ticket an und weise es per `PATCH /tickets/:id/assign` demselben Nutzernamen zu.
 5. Warte (oder stelle dir vor, der Token wäre abgelaufen) und teste eine Anfrage mit einem absichtlich verstümmelten Token gegen `GET /tickets` - notiere den Statuscode.
-6. Fasse in 2-3 Sätzen zusammen, welche drei Statuscodes (`201`/`400`, `200`/`401`, `200`/`401`) in diesem Ablauf jeweils "korrekt" sind und warum.
+6. Fasse in 2-3 Sätzen zusammen, welche drei Statuscodes (`201`/`409`, `200`/`401`, `200`/`401`) in diesem Ablauf jeweils "korrekt" sind und warum.
 
 ## Checkpoint
 
-- Schritt 2 liefert `400` (Nutzername bereits vergeben).
+- Schritt 2 liefert `409` (Nutzername bereits vergeben).
 - Schritt 4 liefert für beide Anfragen Erfolgscodes (`201`/`200`).
 - Schritt 5 liefert `401`.
 
@@ -39,7 +39,7 @@ curl -X POST http://localhost:3000/auth/register \
 
 curl -X POST http://localhost:3000/auth/register \
   -H "Content-Type: application/json" -d '{"username": "sam", "password": "irgendwas"}'
-# 400 { "error": "username already taken" }
+# 409 { "error": "username already taken" }
 
 TOKEN=$(curl -s -X POST http://localhost:3000/auth/login \
   -H "Content-Type: application/json" \

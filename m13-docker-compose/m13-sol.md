@@ -6,13 +6,13 @@
 docker compose down -v
 docker compose up -d --build
 docker compose ps
-# backend   running
-# mongo     running
+# mongo     Up
+# backend fehlt in der Liste: Exited (0), sichtbar mit docker compose ps -a
 docker compose logs backend
 # Vorher: To Do
 # Nach 1. Aufruf: In Progress
 # Nach 2. Aufruf: Done
-docker compose exec backend sh -c "apk add --no-cache bind-tools && nslookup mongo"
+docker compose run --rm --entrypoint sh backend -c "getent hosts mongo"
 docker compose down
 ```
 

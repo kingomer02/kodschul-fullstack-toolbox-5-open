@@ -13,7 +13,9 @@
 2. Ergänze bei `backend` eine Umgebungsvariable `MONGO_URL: mongodb://mongo:27017/teamboard` sowie `depends_on: [mongo]`.
 3. Ergänze bei `mongo` ein benanntes Volume `mongo-data:/data/db` und deklariere `mongo-data` im `volumes:`-Abschnitt.
 4. Starte alles im Hintergrund: `docker compose up -d`, prüfe mit `docker compose ps`, dass beide Services laufen.
-5. Prüfe die Netzwerk-Erreichbarkeit von `mongo` aus dem `backend`-Container heraus (z. B. per `nslookup` oder `ping`, ggf. vorher passendes Tool im Container nachinstallieren).
+5. Prüfe die Namensauflösung von `mongo` aus einem `backend`-Container heraus.
+
+> **Hinweis:** `docker compose exec` setzt einen laufenden Container voraus - `backend` ist aber schon wieder beendet. Überlegt, welcher Compose-Befehl stattdessen einen neuen Container desselben Service startet.
 6. Fahre alles wieder herunter: `docker compose down`. Committe `docker-compose.yml`.
 
 ## Checkpoint
@@ -29,4 +31,4 @@
 
 ## Fallback
 
-Falls `mongo:8` nicht startet (z. B. wegen zu wenig RAM in der Docker-Umgebung): versuchsweise `mongo:8` verwenden - das Verhalten für diese Übung (Erreichbarkeit, Volume) bleibt gleich.
+Falls `mongo:8` nicht startet (z. B. wegen zu wenig RAM in der Docker-Umgebung): der Docker-Umgebung mehr Arbeitsspeicher zuweisen (Docker Desktop → Settings → Resources) oder versuchsweise `mongo:7` verwenden - das Verhalten für diese Übung (Erreichbarkeit, Volume) bleibt gleich.

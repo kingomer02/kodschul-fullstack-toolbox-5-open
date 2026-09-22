@@ -62,7 +62,7 @@ router.post("/register", async (req, res) => {
       .json({ error: "username and password are required" });
   }
   if (users.some((u) => u.username === username)) {
-    return res.status(400).json({ error: "username already taken" });
+    return res.status(409).json({ error: "username already taken" });
   }
   const passwordHash = await bcrypt.hash(password, 10);
   users.push({ username, passwordHash });
