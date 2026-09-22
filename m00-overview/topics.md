@@ -58,16 +58,19 @@
   - Lab 15.1: GraphQL Queries/Mutations
   - Lab 15.2: SQL vs. NoSQL
   - Lab 15.3: MongoDB-Integration
+  - Lab 15.4: Vertiefung async-Fehler/Abfragen in MongoDB
 - Modul 16: Authentifizierung
   - Lab 16.1: JWT/OAuth-Grundlagen
   - Lab 16.2: Login-Flow
   - Lab 16.3: Geschützte Routen testen
+  - Lab 16.4: Vertiefung jeden Eingang schützen, 401/403
 - Modul 17: Frontend-Styling
   - Lab 17.1: Emmet
   - Lab 17.2: Grid/Flexbox
   - Lab 17.3: Bootstrap 5
   - Lab 17.4: Sass
   - Lab 17.5: Gulp-Automatisierung
+  - Lab 17.6: Vertiefung Mobile first/Container Queries
 - Modul 18: Einstieg in React
   - Lab 18.1: SPA-Grundkonzepte
   - Lab 18.2: Komponenten/State

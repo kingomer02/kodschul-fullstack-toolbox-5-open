@@ -7,6 +7,8 @@
 
 - Express-REST-API (Modul 14) läuft containerisiert; `docker-compose.yml` stellt `MONGO_URL` bereit, wird aber noch nicht genutzt.
 
+> **Wer die Vertiefung 14.4-14.7 gemacht hat:** Dein Repository hat zusätzlich `update`, `remove` und `find`, deine Routen liegen im Router. Portiere alles auf MongoDB - `find` darf fürs Erste auf `getAll()` aufsetzen und im Speicher filtern. Teste danach unbedingt eine Route mit `404` oder `422`. Was dabei passiert, ist der Einstieg in **Lab 15.4**.
+
 ## Aufgaben
 
 > **Paketwahl:** `apollo-server` und `apollo-server-express` (Apollo Server v2/v3) sind seit November 2023 abgekündigt und erhalten keine Sicherheitsupdates mehr. Nehmt **`@apollo/server`** zusammen mit **`@as-integrations/express4`**. Die Importe entsprechend: `import { ApolloServer } from "@apollo/server"`, `import { expressMiddleware } from "@as-integrations/express4"`; `gql` kommt aus `graphql-tag`.
