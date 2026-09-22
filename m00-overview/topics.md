@@ -45,10 +45,15 @@
   - Lab 13.1: Multi-Service-Verbindung
   - Lab 13.2: docker-compose.yml
   - Lab 13.3: Ausblick CI-Integration
+  - Lab 13.4: Vertiefung Healthchecks/Startreihenfolge (nach Lab 14.3)
 - Modul 14: REST-API
   - Lab 14.1: Ressourcen/HTTP-Methoden
   - Lab 14.2: Express-REST-API
   - Lab 14.3: API im Container
+  - Lab 14.4: Vertiefung Ressourcen-Design/HTTP-Methoden
+  - Lab 14.5: Vertiefung Router/zentrale Fehlerbehandlung
+  - Lab 14.6: Vertiefung Validierung mit zod
+  - Lab 14.7: Vertiefung Filtern/Sortieren/Paginieren
 - Modul 15: GraphQL & MongoDB
   - Lab 15.1: GraphQL Queries/Mutations
   - Lab 15.2: SQL vs. NoSQL
