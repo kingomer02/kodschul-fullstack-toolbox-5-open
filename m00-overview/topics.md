@@ -79,6 +79,12 @@
   - Lab 19.1: Anbindung an API/Auth
   - Lab 19.2: Props/State-Datenfluss
   - Lab 19.3: Vertiefende Übung
+  - Lab 19.4: Vertiefung Hooks - wann rendert React?
+  - Lab 19.5: Vertiefung Hooks - useMemo
+  - Lab 19.6: Vertiefung Hooks - React.memo und useCallback
+  - Lab 19.7: Vertiefung Hooks - useRef und Aufräumen
+  - Lab 19.8: Vertiefung Hooks - useReducer
+  - Lab 19.9: Vertiefung Hooks - Context
 - Modul 20: Angular im Vergleich (Trainer-Demo)
   - Lab 20.1: Angular-Grundkonzepte
   - Lab 20.2: React-vs-Angular-Vergleich

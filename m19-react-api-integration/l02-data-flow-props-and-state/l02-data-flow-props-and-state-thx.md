@@ -95,6 +95,41 @@ export function LoginForm({ onLoggedIn }: LoginFormProps) {
 }
 ```
 
+## `Column` bekommt die Tickets jetzt als Props
+
+In Modul 18 hat `Column` die Tickets per `useState(initialTickets)` in einen eigenen State kopiert. Das ging, solange die Daten fest im Code standen. Jetzt kommen sie aus der API - und **React liest den Anfangswert von `useState` nur beim allerersten Rendern.** Beim ersten Rendern ist die Liste noch leer; dass später Tickets nachgeladen werden, bekommt `Column` nicht mehr mit. Das Board bliebe leer.
+
+Deshalb hält `Column` keinen eigenen State mehr, sondern zeigt, was hereinkommt:
+
+```tsx
+// frontend/src/components/Column.tsx
+import { TicketCard } from "./TicketCard";
+
+interface Ticket {
+  id: string;
+  title: string;
+  assignee: string;
+}
+
+interface ColumnProps {
+  title: string;
+  tickets: Ticket[];
+}
+
+export function Column({ title, tickets }: ColumnProps) {
+  return (
+    <div className="column">
+      <h2>{title}</h2>
+      {tickets.map((ticket) => (
+        <TicketCard key={ticket.id} title={ticket.title} assignee={ticket.assignee} />
+      ))}
+    </div>
+  );
+}
+```
+
+**Faustregel:** Was sich aus Props oder anderem State berechnen lässt, ist kein eigener State.
+
 ## Echte Tickets laden
 
 ```tsx
@@ -133,19 +168,19 @@ function App() {
         <div className="col-12 col-md-4 column todo">
           <Column
             title="To Do"
-            initialTickets={tickets.filter((t) => t.status === "To Do")}
+            tickets={tickets.filter((t) => t.status === "To Do")}
           />
         </div>
         <div className="col-12 col-md-4 column in-progress">
           <Column
             title="In Progress"
-            initialTickets={tickets.filter((t) => t.status === "In Progress")}
+            tickets={tickets.filter((t) => t.status === "In Progress")}
           />
         </div>
         <div className="col-12 col-md-4 column done">
           <Column
             title="Done"
-            initialTickets={tickets.filter((t) => t.status === "Done")}
+            tickets={tickets.filter((t) => t.status === "Done")}
           />
         </div>
       </div>
